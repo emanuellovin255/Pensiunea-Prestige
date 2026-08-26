@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pensiuneaprestige-rosiori.ro/sitemap.xml
