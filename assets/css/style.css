@@ -330,6 +330,8 @@ p:last-child { margin-bottom: 0; }
 .card__img { aspect-ratio: 4/3; overflow: hidden; background: var(--cream-deep); }
 .card__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
 .card:hover .card__img img { transform: scale(1.045); }
+.card__img--grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 2px; }
+.card__img--grid > span { display: block; overflow: hidden; }
 .card__body { padding: var(--s-5); display: flex; flex-direction: column; flex: 1; }
 .card__body h3 { margin-bottom: var(--s-2); }
 .card__body p { font-size: .95rem; color: var(--muted); flex: 1; }
