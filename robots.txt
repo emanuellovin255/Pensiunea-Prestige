@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pensiuneaprestige-rosiori.ro/sitemap.xml
+Sitemap: https://www.pensiuneaprestige1.ro/sitemap.xml

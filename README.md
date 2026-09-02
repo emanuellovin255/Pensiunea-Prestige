@@ -32,18 +32,26 @@ assets/img/              Fotografiile (preluate de pe pagina de Facebook)
 robots.txt, sitemap.xml  SEO
 ```
 
-## Ce trebuie schimbat înainte de lansare
+## Ce mai poate fi îmbunătățit
 
-1. **Domeniul.** Caută `pensiuneaprestige-rosiori.ro` în `.html`, `robots.txt`
-   și `sitemap.xml` și înlocuiește-l cu domeniul real. Afectează link-urile
-   canonice și Open Graph.
-2. **Conținut neconfirmat.** Textele au fost scrise strict pe baza informațiilor
+1. **Conținut neconfirmat.** Textele au fost scrise strict pe baza informațiilor
    publice de pe pagina de Facebook. Nu sunt confirmate și *nu apar* pe site:
    numărul exact de camere, dacă micul dejun e inclus, parcarea, Wi-Fi-ul.
    Când le confirmi, se pot adăuga în `camere.html` și în lista de facilități.
-3. **Poze mai bune.** Cinci fotografii sunt la rezoluție mare (1440px), restul
+2. **Poze mai bune.** Cinci fotografii sunt la rezoluție mare (1440px), restul
    la 414px — atât era public pe Facebook. Dacă ai originalele, înlocuiește
    fișierele din `assets/img/` păstrând aceleași nume.
+
+## Găzduire
+
+Site-ul rulează pe **Vercel**, domeniul canonic este
+<https://www.pensiuneaprestige1.ro> (apex-ul redirecționează 308 către `www`).
+
+`vercel.json` setează headerele de securitate (CSP, X-Frame-Options,
+X-Content-Type-Options, X-XSS-Protection, Referrer-Policy, HSTS,
+Permissions-Policy) și cache-ul lung pentru `assets/`. Dacă schimbi domeniul,
+caută `www.pensiuneaprestige1.ro` în `.html`, `robots.txt` și `sitemap.xml` —
+afectează canonical, Open Graph și datele structurate.
 
 ## Contact folosit în site
 
