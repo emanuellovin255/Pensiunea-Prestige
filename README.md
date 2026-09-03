@@ -42,6 +42,36 @@ robots.txt, sitemap.xml  SEO
    la 414px — atât era public pe Facebook. Dacă ai originalele, înlocuiește
    fișierele din `assets/img/` păstrând aceleași nume.
 
+## Mod "site în lucru" (pauză)
+
+Site-ul poate fi pus pe pauză fără să ștergi nimic: `maintenance.html` e o
+pagină de sine stătătoare ("Revenim în curând" + telefon și WhatsApp), iar
+blocul `redirects` din `vercel.json` trimite orice adresă către ea, temporar
+(HTTP 307, deci Google nu pierde paginile indexate).
+
+Rămân accesibile normal: `/maintenance.html`, `/assets/*`, `/robots.txt`,
+`/sitemap.xml` și `/.well-known/*`.
+
+**Ca să repui site-ul online:** șterge blocul `"redirects": [ ... ]` din
+`vercel.json` și dă push. Paginile revin instant, nimic altceva nu se schimbă.
+
+**Ca să-l pui iar pe pauză:** adaugi blocul înapoi.
+
+```json
+"redirects": [
+  { "source": "/", "destination": "/maintenance.html", "permanent": false },
+  {
+    "source": "/:path((?!maintenance\\.html$|assets/|\\.well-known/|robots\\.txt$|sitemap\\.xml$|favicon).+)",
+    "destination": "/maintenance.html",
+    "permanent": false
+  }
+],
+```
+
+Dacă pauza ține mai mult de câteva săptămâni, mai bine schimbăm pe un răspuns
+`503` cu `Retry-After` (are nevoie de o funcție pe Vercel) — redirectul temporar
+e gândit pentru pauze scurte.
+
 ## Găzduire
 
 Site-ul rulează pe **Vercel**, domeniul canonic este

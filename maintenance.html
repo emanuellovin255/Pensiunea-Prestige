@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Site în lucru — Pensiunea Prestige, Roșiori de Vede</title>
+<meta name="description" content="Site-ul Pensiunea Prestige este momentan în lucru. Rezervări și informații la 0762 685 300 sau pe WhatsApp.">
+<meta name="theme-color" content="#B08D57">
+<meta name="robots" content="noindex, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pensiunea Prestige">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:title" content="Site în lucru — Pensiunea Prestige">
+<meta property="og:description" content="Revenim în curând. Rezervări la 0762 685 300, non-stop.">
+<meta property="og:image" content="https://www.pensiuneaprestige1.ro/assets/img/exterior.jpg">
+
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/exterior-thumb.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap">
+
+<style>
+  :root {
+    --cream:      #FBF8F3;
+    --surface:    #FFFFFF;
+    --ink:        #2A211C;
+    --ink-soft:   #4A3E36;
+    --muted:      #7A6A5E;
+    --line:       #E6DCCD;
+    --gold:       #B08D57;
+    --gold-deep:  #8F6F3E;
+    --gold-wash:  #F7F0E4;
+    --whatsapp:   #25D366;
+    --font-display: "Fraunces", "Iowan Old Style", Georgia, "Times New Roman", serif;
+    --font-body:    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    background:
+      radial-gradient(1200px 600px at 50% -10%, #FFFFFF 0%, rgba(255,255,255,0) 60%),
+      var(--cream);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 620px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    box-shadow: 0 12px 28px rgba(42,33,28,.08), 0 28px 64px rgba(42,33,28,.08);
+    padding: clamp(1.75rem, 5vw, 3rem);
+    text-align: center;
+  }
+
+  .mark {
+    width: 62px;
+    height: 62px;
+    margin: 0 auto 1.5rem;
+    border-radius: 16px;
+    background: var(--ink);
+    color: var(--gold);
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 62px;
+  }
+
+  .badge {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: .3rem .85rem;
+    border-radius: 999px;
+    background: var(--gold-wash);
+    color: var(--gold-deep);
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 0 0 .75rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.9rem, 6vw, 2.6rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+  }
+
+  .lead { margin: 0 0 .5rem; }
+  .note { margin: 0; color: var(--muted); font-size: .95rem; }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--line);
+    margin: 1.75rem 0;
+  }
+
+  .contact-title {
+    margin: 0 0 1rem;
+    font-size: .82rem;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    justify-content: center;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    flex: 1 1 200px;
+    padding: .85rem 1.4rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+  .btn-phone {
+    background: var(--gold);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(176,141,87,.28);
+  }
+  .btn-phone:hover { background: var(--gold-deep); }
+
+  .btn-wa {
+    background: var(--whatsapp);
+    color: #073B26;
+    box-shadow: 0 4px 12px rgba(37,211,102,.25);
+  }
+  .btn-wa:hover { background: #1EBE5A; }
+
+  .address {
+    margin: 1.5rem 0 0;
+    font-size: .95rem;
+    color: var(--muted);
+  }
+  .address a { color: var(--gold-deep); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .btn { transition: none; }
+    .btn:hover { transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<main class="card">
+  <div class="mark" aria-hidden="true">P</div>
+
+  <p class="badge">Site în lucru</p>
+
+  <h1>Revenim în curând</h1>
+
+  <p class="lead">
+    Lucrăm la site-ul Pensiunii Prestige. Pensiunea funcționează normal,
+    cu recepție non-stop.
+  </p>
+  <p class="note">Rezervările se fac în continuare la telefon sau pe WhatsApp.</p>
+
+  <hr>
+
+  <p class="contact-title">Rezervări și informații</p>
+
+  <div class="actions">
+    <a class="btn btn-phone" href="tel:+40762685300">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      0762 685 300
+    </a>
+
+    <a class="btn btn-wa" href="https://wa.me/40762685300" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12.04 2A9.9 9.9 0 0 0 2.1 11.9c0 1.75.46 3.46 1.33 4.97L2 22l5.28-1.38a9.9 9.9 0 0 0 4.76 1.21h.01a9.9 9.9 0 0 0 9.93-9.9A9.9 9.9 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.13.82.84-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.38 8.24 8.24 0 1 1 8.24 8.25zm4.52-6.17c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.71-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.09-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.16 0-.43.06-.65.31-.22.24-.85.83-.85 2.03s.87 2.35.99 2.51c.12.16 1.71 2.61 4.15 3.66.58.25 1.03.4 1.38.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29z"/>
+      </svg>
+      WhatsApp
+    </a>
+  </div>
+
+  <p class="address">
+    Str. Dunării nr. 181, Roșiori de Vede, jud. Teleorman ·
+    <a href="https://wa.me/40762685300" target="_blank" rel="noopener">scrie-ne</a>
+  </p>
+</main>
+
+</body>
+</html>
